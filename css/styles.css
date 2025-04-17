@@ -1,0 +1,359 @@
+/* Style dasar body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #156d8b, #B4D4FF);
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+.header-profile {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.mini-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.mini-profile:hover {
+    transform: scale(1.1);
+    border-color: rgb(0, 204, 255);
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    align-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(37, 230, 255);
+    transform: scale(1.1);
+}
+
+/* mode gelap */
+.dark {
+    background: #121212;
+    color: white;
+  }
+  
+  .dark .mini-profile {
+    border-color: #fff;
+  }
+  
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding-top: 80px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 0.5s;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1s;
+}
+
+#profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #b0bec5;
+    border: 4px solid white;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 1.5s;
+    -webkit-animation: fadeIn 1.5s forwards 1.5s;
+}
+
+/*pengubahan gambar*/
+.image-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 50px auto;
+    background-image: url('gambar/default.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transition: background-image 0.5s ease;
+}
+  
+.circle-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+  
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+  
+.circle:hover {
+    transform: scale(1.1);
+}
+  
+.circle:nth-child(1) {
+    background-color: #444;
+}
+.circle:nth-child(2) {
+    background-color: #ddd;
+}
+.circle:nth-child(3) {
+    background-color: #bbb;
+}
+
+/*skil*/
+.my-skill-section {
+    padding: 50px 0;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    text-align: center;
+  }
+
+  .my-skill-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .my-skill-marquee {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .my-skill-slider {
+    display: flex;
+    width: max-content;
+    animation: my-skill-scroll 20s linear infinite;
+    background-color: transparent;
+  }
+
+  .my-skill-items {
+    display: flex;
+    gap: 30px;
+  }
+
+  .my-skill {
+    background: linear-gradient(to right, #74b9ff, #6c5ce7);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .my-skill img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  @keyframes my-skill-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+/* Bungkus luar */
+.data {
+    background: rgba(255, 255, 255, 0.2); /* semi transparan */
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 1px solid blue;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* efek kaca */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 800px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.bungkus {
+    flex: 1;
+    text-align: center;
+}
+
+.pesan {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+/* Input dan textarea */
+form input[type="text"],
+form textarea,
+form input[type="date"] {
+    width: 80%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea {
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: horizontal;
+}
+
+/* Tombol kirim */
+form input[type="submit"] {
+    width: 40%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form button {
+    width: 80%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .data {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+  }

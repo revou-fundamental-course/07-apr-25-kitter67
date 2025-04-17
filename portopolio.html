@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    <!-- bagian atas/ navbar  -->
+    <header>
+        <div class="header-profile">
+            <img src="gambar/furina-3.jpeg" alt="Profil" class="mini-profile">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#gleri">gleri</a></li>
+                <li><a href="#komentar">komentar</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="mode-gelap">
+            <button></button>
+        </div>
+    </header>
+    
+    <!-- bagian utama -->
+
+<!--propil -->
+<main>
+    
+    <section id="about">
+        <div class="hero">
+            <img src="gambar/furina-3.jpeg" alt="Foto Profil" id="profile-pic">
+            <h1>Hi. saya sidqiw</h1>
+            <p>Saya adalah software developer. Di sini saya bereksperimen untuk membuat portofolio saya dan memperlihatkan beberapa project yang saya buat.</p>
+        </div>
+    </section>
+
+
+    <section id="gleri">
+        <div class="image-container" id="imageContainer"></div>
+
+        <div class="circle-container">
+            <div class="circle" data-image="gambar/GTR-2.jpg" ></div>
+            <div class="circle" data-image="gambar/star.png" style="aspect-ratio: 1/1;"></div>
+            <div class="circle" data-image="gambar/elaina-b.jpg"></div>
+        </div>
+    </section>
+<!-- skil-->
+<section class="my-skill-section" id="skills">
+    <h2 class="my-skill-title">My Skill</h2>
+    <marquee class="my-skill-marquee" behavior="scroll" direction="left" scrollamount="10">
+        <div class="my-skill-slider">
+            <div class="my-skill-items">
+            <div class="my-skill"><img src="" alt=""> Html</div>
+            <div class="my-skill"><img src="" alt=""> CSS</div>
+            <div class="my-skill"><img src="" alt=""> JAVA</div>
+            <div class="my-skill"><img src="" alt=""> Python</div>
+            <div class="my-skill"><img src="" alt=""> PHP</div>
+            </div>
+        </div>
+    </marquee>
+</section>
+  
+        
+<!-- komentar dan pendapat-->
+    <section id="komentar">
+        <h1 style="text-align: center;">Komentar</h1>
+        <div class="data">
+            <div class="bungkus">
+                <!-- Formulir untuk input pengguna -->
+                <form>
+                    <input type="text" id="name" name="name" placeholder="Masukan nama"><br>
+                    <label for="dob">Tanggal</label><br>
+                    <input type="date" id="dob" name="dob" required><br>
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="female">Perempuan</label>
+                    <input type="radio" id="female" name="gender" value="female"><br>
+                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Berikan komentar"></textarea><br>
+    
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+
+            <div class="pesan">
+                <h2 style="text-align: center;">Pesan anda</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="content">
+        
+    </section>
+
+
+</main>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
